@@ -30,7 +30,7 @@ class home extends StatelessWidget{
               alignment: Alignment.center,
               child: Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0),),
-                color: Color.fromRGBO(252, 219, 138, 1),
+                color: Color(0xFFb2c8eb),
                 child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -47,7 +47,7 @@ class home extends StatelessWidget{
 
                     Text("Vocational High School Student at SMK Wikrama Bogor",
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 16, color: Color(0xF9916B0D))
+                    style: TextStyle(fontSize: 16, color: Color.fromARGB(248, 0, 0, 0))
                     ),
 
                     TextButton(onPressed: (){

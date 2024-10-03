@@ -72,8 +72,8 @@ class Profile extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
               child: Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-                'Nullam in venenatis enim. Etiam tincidunt, urna et tempor.',
+                'I am a Junior Full-Stack Developer with impressive skills in HTML, CSS, JavaScript, PHP, and C++.'
+                'I am always interested in web technology and enjoy learning new programming languages and the latest technologies in web development.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14,
