@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({Key? key}) : super(key: key);
+  const Profile({
+    Key? key,
+    required this.username,
+    required this.role,
+    required this.skills1,
+    required this.skills2,
+    required this.about,
+  }) : super(key: key);
+
+  final String username;
+  final String role;
+  final String skills1;
+  final String skills2;
+  final String about;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +30,7 @@ class Profile extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'Ramon Hidayat',
+              username,
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -26,14 +39,13 @@ class Profile extends StatelessWidget {
             ),
             SizedBox(height: 4),
             Text(
-              'Fullstack Developer',
+              role,
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.white70,
               ),
             ),
             SizedBox(height: 16),
-
             Text(
               'Skills',
               style: TextStyle(
@@ -43,24 +55,16 @@ class Profile extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
               child: Column(
                 children: [
-                  SkillItem(skill: 'Flutter'),
-                  SkillItem(skill: 'Laravel'),
-                  SkillItem(skill: 'Python'),
-                  SkillItem(skill: 'Node.js'),
-                  SkillItem(skill: 'MySQL'),
-                  SkillItem(skill: 'RESTful APIs'),
-                  SkillItem(skill: 'Git & GitHub'),
+                  SkillItem(skill: skills1),
+                  SkillItem(skill: skills2),
                 ],
               ),
             ),
-            
             SizedBox(height: 20),
-
             Text(
               'About',
               style: TextStyle(
@@ -72,8 +76,7 @@ class Profile extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
               child: Text(
-                'I am a Junior Full-Stack Developer with impressive skills in HTML, CSS, JavaScript, PHP, and C++.'
-                'I am always interested in web technology and enjoy learning new programming languages and the latest technologies in web development.',
+                about,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14,
@@ -96,18 +99,16 @@ class SkillItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.check, color: Colors.yellow, size: 20),
-          SizedBox(width: 8),
-          Text(
-            skill,
-            style: TextStyle(color: Colors.white70, fontSize: 16),
-          ),
-        ],
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 5),
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Text(
+        skill,
+        style: TextStyle(color: Colors.white),
       ),
     );
   }
